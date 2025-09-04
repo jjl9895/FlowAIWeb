@@ -41,6 +41,17 @@ body {
         margin-bottom: 16px;
     }
     
+    .typing-cursor {
+        color: white;
+        font-weight: 400;
+        animation: blink 1s infinite;
+    }
+    
+    @keyframes blink {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
+    }
+    
     .subtitle {
         font-size: 1.2rem;
         font-weight: 400;

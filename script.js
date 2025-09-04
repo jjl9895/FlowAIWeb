@@ -62,17 +62,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const tagline = document.querySelector('.tagline');
     if (tagline) {
         const text = tagline.textContent;
-        tagline.textContent = '';
-        tagline.style.borderRight = '2px solid white';
+        tagline.innerHTML = '<span class="typing-text"></span><span class="typing-cursor">|</span>';
+        const typingText = tagline.querySelector('.typing-text');
+        const typingCursor = tagline.querySelector('.typing-cursor');
         
         let i = 0;
         const typeWriter = () => {
             if (i < text.length) {
-                tagline.textContent += text.charAt(i);
+                typingText.textContent += text.charAt(i);
                 i++;
                 setTimeout(typeWriter, 100);
             } else {
-                tagline.style.borderRight = 'none';
+                typingCursor.style.opacity = '0';
             }
         };
         
