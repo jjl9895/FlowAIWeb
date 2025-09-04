@@ -34,12 +34,19 @@ body {
     letter-spacing: -0.02em;
 }
 
-.tagline {
-    font-size: 1.5rem;
-    font-weight: 300;
-    opacity: 0.9;
-    margin-bottom: 20px;
-}
+    .tagline {
+        font-size: 1.5rem;
+        font-weight: 300;
+        opacity: 0.9;
+        margin-bottom: 16px;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+        font-weight: 400;
+        opacity: 0.8;
+        margin-bottom: 20px;
+    }
 
 /* Main content */
 .main-content {
@@ -150,10 +157,95 @@ body {
     color: #2d3748;
 }
 
-.feature-card p {
-    color: #4a5568;
-    line-height: 1.6;
-}
+    .feature-card p {
+        color: #4a5568;
+        line-height: 1.6;
+    }
+    
+    /* Problem section */
+    .problem-section {
+        padding: 60px 40px;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        text-align: center;
+    }
+    
+    .problem-section h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+        color: #2d3748;
+    }
+    
+    .problem-text {
+        font-size: 1.3rem;
+        color: #4a5568;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        line-height: 1.7;
+    }
+    
+    .problem-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin-bottom: 8px;
+    }
+    
+        .stat-label {
+        font-size: 0.9rem;
+        color: #4a5568;
+        text-align: center;
+        line-height: 1.4;
+    }
+    
+    /* Info section */
+    .info-section {
+        padding: 60px 40px;
+        background: white;
+    }
+    
+    .info-section h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #2d3748;
+    }
+    
+    .info-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .info-text p {
+        font-size: 1.1rem;
+        color: #4a5568;
+        line-height: 1.8;
+        margin-bottom: 25px;
+        text-align: justify;
+    }
+    
+    .info-text p:last-child {
+        margin-bottom: 0;
+    }
 
 /* Footer */
 .footer {
@@ -174,16 +266,25 @@ body {
     }
     
     .video-section,
-    .features-section {
+    .features-section,
+    .problem-section,
+    .info-section {
         padding: 40px 20px;
     }
     
     .video-section h2,
-    .features-section h2 {
+    .features-section h2,
+    .problem-section h2,
+    .info-section h2 {
         font-size: 2rem;
     }
     
     .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .problem-stats {
         grid-template-columns: 1fr;
         gap: 20px;
     }
