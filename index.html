@@ -1,103 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flow AI - Intelligent Flow Management</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow AI — Personal Context Engine for LLMs</title>
+  <meta name="description" content="Give ChatGPT & Claude perfect, private context via an on-device MCP server. Optional ad blocking. Join the private beta waitlist." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1 class="logo">Flow AI</h1>
-            <p class="tagline">Paying people for workflows to train agentic AI</p>
-            <p class="subtitle">The missing backbone for agentic AI training</p>
-        </header>
-        
-        <main class="main-content">
-            <section class="video-section">
-                <h2>Demo Video</h2>
-                <div class="video-container">
-                    <video controls width="100%" height="400" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                        <source src="Flow AI Demo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </section>
-            
-            <section class="features-section">
-                <h2>What We Do</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">💰</div>
-                        <h3>Get Paid for Your Workflows</h3>
-                        <p>Earn money by letting us track your computer interactions to train better AI agents</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔍</div>
-                        <h3>Privacy-First Tracking</h3>
-                        <p>Customizable tracking that only monitors apps you allow, with full transparency</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🤖</div>
-                        <h3>Train Agentic AI</h3>
-                        <p>Your real workflow data becomes the training backbone for the next generation of AI agents</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💻</div>
-                        <h3>Easy to Use</h3>
-                        <p>Start and stop tracking with just one click. Works on desktop and browser seamlessly</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="problem-section">
-                <h2>The Problem We're Solving</h2>
-                <div class="problem-content">
-                    <p class="problem-text">
-                        There's no "ImageNet for workflows" - the missing backbone that agentic AI desperately needs. 
-                        Companies like OpenAI, Anthropic, and Google have identified workflow data as a huge bottleneck. 
-                        We're building the solution.
-                    </p>
-                    <div class="problem-stats">
-                        <div class="stat">
-                            <span class="stat-number">$30B+</span>
-                            <span class="stat-label">AI Training Data Market by 2030</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Privacy Protected</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="info-section">
-                <h2>How Flow AI Works</h2>
-                <div class="info-content">
-                    <div class="info-text">
-                        <p>
-                            Flow AI is an application and a browser extension that tracks data and packages it in a way that makes it optimal for training agentic AI. This desktop application and browser would record how users interact with software and their computers. Clicks, form submissions, navigations, shortcuts, cross-app workflows, etc. are tracked. This application would be easily customizable and would only track applications that a user allows to be tracked. Users of Flow AI would also be paid for letting the application use their workflow data. With just the click of a button, a user can start and stop tracking.
-                        </p>
-                        
-                        <p>
-                            On the backend, we would turn raw interactions such as clicks, form submissions, app navigation, etc. into a proper schema. This would also include outcome signals (success, failure, abandonment), and we would then combine them into higher-level task graphs. Furthermore, with all this data, we can even have a feature that provides context for LLMs as a free addition to incentivize users. Existing solutions, like rewind.ai, already offer similar tracking services but require payment from the tracked individuals.
-                        </p>
-                        
-                        <p>
-                            The result of Flow AI tracking and paying users would be a structured and large-scale dataset of real human computer usage that companies can use to evaluate and train agentic AI systems. Just as how Common Crawl became indispensable to LLM training, Flow AI could be the workflow data backbone for agentic labs and enterprises. Even if APIs can be used for clicking certain buttons or pressing keys, the training data still needs the context we provide. Furthermore, cross-app navigation and workflows would still be extremely important, but only keys and clicks would be less valued. Our data would provide this crucial missing context.
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </main>
-        
-        <footer class="footer">
-            <p>&copy; 2024 Flow AI. All rights reserved.</p>
-        </footer>
-    </div>
+<body class="bg-black text-white antialiased">
+  <div class="mx-auto max-w-3xl px-4 py-8 md:py-12">
+    <!-- Header -->
+    <header class="mb-12 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-sky-500 to-fuchsia-500"></div>
+        <span class="text-lg font-bold">Flow AI</span>
+      </div>
+      <div class="text-sm text-neutral-400">
+        Your on-device context → ChatGPT & Claude (safely)
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="mb-12">
+      <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-900/60 px-3 py-1.5 text-xs text-neutral-300">
+        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        MCP server private beta — limited seats
+      </div>
+      <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
+        Give <span class="text-sky-400">ChatGPT & Claude</span> the right context —
+        with<strong> on-device privacy</strong>.
+      </h1>
+      <p class="mt-4 text-neutral-300 md:text-lg">
+        Flow AI runs an on-device <strong>MCP (Model Context Protocol) server</strong> that lets your LLMs securely reference local context (recent files, calendar snippets, app state). Optional: built-in ad blocking while you browse.
+      </p>
+
+      <!-- Trust / Bullets -->
+      <ul class="mt-6 space-y-3 text-sm text-neutral-300">
+        <li class="flex gap-3"><span class="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-sky-400"></span> On-device MCP server: scope-limited tools expose only what you authorize.</li>
+        <li class="flex gap-3"><span class="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Fine-grained control: approve each request; redact paths and titles by policy.</li>
+        <li class="flex gap-3"><span class="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-fuchsia-400"></span> Optional ad blocking: cleaner pages, less distraction, better model context.</li>
+      </ul>
+
+      <!-- Social proof -->
+      <div class="mt-6 flex flex-wrap gap-2 text-xs text-neutral-300">
+        <div class="rounded-xl border border-neutral-800 p-3">On-device first</div>
+        <div class="rounded-xl border border-neutral-800 p-3">Consent-gated</div>
+        <div class="rounded-xl border border-neutral-800 p-3">MCP standard</div>
+        <div class="rounded-xl border border-neutral-800 p-3">Ad blocking option</div>
+      </div>
+    </section>
+
+    <!-- Waitlist Form -->
+    <section class="mb-12">
+      <h2 class="mb-4 text-xl font-semibold">Join the private beta</h2>
+      <form id="waitlist-form" class="rounded-xl bg-neutral-900/60 backdrop-blur border border-neutral-800 p-4 md:p-5">
+        <div class="grid grid-cols-1 gap-3">
+          <div class="flex gap-3">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@university.edu" class="flex-1 rounded-lg bg-black/60 border border-neutral-700 px-3 py-3 text-sm outline-none focus:ring-2 focus:ring-sky-500" />
+            <label class="sr-only" for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Name (optional)" class="hidden md:block w-40 rounded-lg bg-black/60 border border-neutral-700 px-3 py-3 text-sm outline-none focus:ring-2 focus:ring-sky-500" />
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div>
+                <label for="use_case" class="block text-xs text-neutral-400 mb-1">Primary interest</label>
+                <select id="use_case" class="w-full rounded-lg bg-black/60 border border-neutral-700 px-3 py-2 text-sm focus:ring-2 focus:ring-sky-500">
+                  <option>ChatGPT context via MCP</option>
+                  <option>Claude context via MCP</option>
+                  <option>Both (ChatGPT + Claude)</option>
+                  <option>Ad blocking</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <fieldset class="text-xs text-neutral-300">
+                  <legend class="mb-1 text-neutral-400">Platform</legend>
+                  <div class="flex flex-wrap gap-3">
+                    <label class="inline-flex items-center gap-2"><input type="checkbox" id="plat_mac" class="rounded border-neutral-600 bg-neutral-900"/> macOS</label>
+                    <label class="inline-flex items-center gap-2"><input type="checkbox" id="plat_win" class="rounded border-neutral-600 bg-neutral-900"/> Windows</label>
+                    <label class="inline-flex items-center gap-2"><input type="checkbox" id="plat_linux" class="rounded border-neutral-600 bg-neutral-900"/> Linux</label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <button id="submit" type="submit" class="md:col-span-1 h-[46px] rounded-lg bg-sky-600 hover:bg-sky-500 active:bg-sky-700 transition font-semibold">
+              Join waitlist
+            </button>
+          </div>
+
+          <label class="block text-xs text-neutral-400" for="referrer">How did you hear about us? (optional)</label>
+          <input id="referrer" name="referrer" type="text" placeholder="Twitter, Reddit, friend, campus, etc." class="rounded-lg bg-black/60 border border-neutral-700 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-sky-500" />
+
+          <div class="mt-1 flex items-start gap-2 text-xs text-neutral-400">
+            <input id="consent" type="checkbox" required class="mt-0.5 rounded border-neutral-600 bg-neutral-900" />
+            <label for="consent">I agree to receive emails about beta access and understand Flow AI never uploads raw text or keystrokes; all sharing is opt-in per prompt.</label>
+          </div>
+          <p id="message" class="mt-2 text-sm"></p>
+        </div>
+      </form>
+    </section>
+
+    <!-- FAQ (short) -->
+    <section class="mt-10 grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-2 rounded-2xl border border-neutral-800 bg-neutral-950 p-6">
+        <h2 class="text-lg font-semibold mb-4">How it works</h2>
+        <div class="space-y-3 text-sm text-neutral-300">
+          <p><strong>MCP (Model Context Protocol)</strong> lets local tools securely provide context to LLMs. Flow AI runs an MCP server on your machine with tools you enable (e.g., "recent files", "calendar today", "current tab outline").</p>
+          <p>When your LLM asks for context, you see and approve the exact request. Only the approved snippets are shared for that one prompt. You can revoke tools anytime.</p>
+          <p>Ad blocking is optional and uses well-known filter lists to declutter pages before context is summarized.</p>
+        </div>
+      </div>
+      <aside class="rounded-2xl border border-neutral-800 bg-neutral-950 p-6 text-sm text-neutral-300">
+        <h3 class="font-semibold mb-2">Developers</h3>
+        <p>Want early docs for the MCP toolset and schemas? We'll send a preview to waitlisters.</p>
+        <h3 class="font-semibold mt-4 mb-2">Contact</h3>
+        <p>Questions? <a href="mailto:jeffreylin5889@gmail" class="text-sky-400 hover:underline">Email the team</a></p>
+      </aside>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-12 border-t border-neutral-800 pt-6 text-center text-xs text-neutral-500">
+      © <span id="year"></span> Flow AI — Personal Context Engine for LLMs
+    </footer>
+  </div>
+
+  <script type="module">
+    // Supabase schema:
+    // create table public.waitlist (
+    //   id uuid primary key default gen_random_uuid(),
+    //   email text unique not null,
+    //   name text,
+    //   consent boolean not null default true,
+    //   use_case text,
+    //   platforms text[],
+    //   referrer text,
+    //   created_at timestamptz not null default now()
+    // );
+    // alter table public.waitlist enable row level security;
+    // create policy "insert_waitlist" on public.waitlist for insert with check (true);
+
     
-    <script src="script.js"></script>
+    const SUPABASE_URL = "https://ckxbztyvanragklrjbik.supabase.co"; 
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNreGJ6dHl2YW5yYWdrbHJqYmlrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA4NzI3NDYsImV4cCI6MjA3NjQ0ODc0Nn0.dnondIm8spsMEdFP5yUpwawZUBbEFV3PbgY6TbLDOs0";
+
+    let supabase = null;
+    if (SUPABASE_URL && SUPABASE_ANON_KEY) {
+      const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2');
+      supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    }
+
+    const form = document.getElementById('waitlist-form');
+    const submitBtn = document.getElementById('submit');
+    const message = document.getElementById('message');
+    const emailEl = document.getElementById('email');
+    const nameEl = document.getElementById('name');
+    const consentEl = document.getElementById('consent');
+    const useCaseEl = document.getElementById('use_case');
+    const referrerEl = document.getElementById('referrer');
+    const platMac = document.getElementById('plat_mac');
+    const platWin = document.getElementById('plat_win');
+    const platLinux = document.getElementById('plat_linux');
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      message.textContent = '';
+
+      const email = emailEl.value.trim().toLowerCase();
+      const name = nameEl.value.trim();
+      const consent = consentEl.checked;
+      const use_case = useCaseEl.value;
+      const platforms = [platMac.checked ? 'macOS' : null, platWin.checked ? 'Windows' : null, platLinux.checked ? 'Linux' : null].filter(Boolean);
+      const referrer = referrerEl.value.trim();
+
+      if (!emailRegex.test(email)) {
+        message.className = 'mt-3 text-sm text-red-400';
+        message.textContent = 'Please enter a valid email address.';
+        return;
+      }
+      if (!consent) {
+        message.className = 'mt-3 text-sm text-red-400';
+        message.textContent = 'Consent is required to join the waitlist.';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-60');
+      submitBtn.textContent = 'Submitting…';
+
+      try {
+        if (supabase) {
+          const { error } = await supabase
+            .from('waitlist')
+            .insert({ email, name: name || null, consent: true, use_case, platforms, referrer: referrer || null });
+          if (error) throw error;
+        } else {
+          const key = 'flowai_waitlist_local';
+          const list = JSON.parse(localStorage.getItem(key) || '[]');
+          if (!list.find((x) => x.email === email)) list.push({ email, name, consent, use_case, platforms, referrer, ts: Date.now() });
+          localStorage.setItem(key, JSON.stringify(list));
+        }
+
+        form.reset();
+        message.className = 'mt-3 text-sm text-emerald-400';
+        message.textContent = 'Success! You\'re on the list for the MCP beta.';
+        submitBtn.textContent = 'Joined ✅';
+      } catch (err) {
+        console.error(err);
+        message.className = 'mt-3 text-sm text-red-400';
+        message.textContent = 'Something went wrong. Please try again.';
+        submitBtn.textContent = 'Join waitlist';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-60');
+      }
+    });
+  </script>
 </body>
 </html>
